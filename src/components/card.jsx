@@ -22,7 +22,7 @@ export function Card({ variant, size = "small", onClick }) {
     <aside
       role="listitem"
       className={`${styles.card} ${styles[size]}`}
-      onClick={() => onClick(variant)}
+      onClick={() => onClick && onClick(variant)}
     >
       <img src={image} alt={variant} />
     </aside>

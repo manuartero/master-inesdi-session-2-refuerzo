@@ -8,15 +8,11 @@ const tarotCards = ["fool", "empress", "tower", "death"];
 export function App() {
   const [focusedCard, setFocusedCard] = useState();
 
-  const onClickCard = (cardName) => {
-    setFocusedCard(cardName);
-  };
-
   return (
     <main className="app">
       <div className="cardList" role="list">
         {tarotCards.map((card, i) => (
-          <Card key={`card-${i}`} variant={card} onClick={onClickCard} />
+          <Card key={`card-${i}`} variant={card} onClick={setFocusedCard} />
         ))}
       </div>
 
